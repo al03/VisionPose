@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500BB12E24A4CDAD00083FDF /* CGImage+DrawPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500BB12D24A4CDAD00083FDF /* CGImage+DrawPoint.swift */; };
 		50163ABC24A34B1C006C9708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50163ABB24A34B1C006C9708 /* AppDelegate.swift */; };
 		50163ABE24A34B1C006C9708 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50163ABD24A34B1C006C9708 /* SceneDelegate.swift */; };
 		50163AC024A34B1C006C9708 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50163ABF24A34B1C006C9708 /* ViewController.swift */; };
@@ -15,6 +16,8 @@
 		50163AC824A34B1D006C9708 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50163AC624A34B1D006C9708 /* LaunchScreen.storyboard */; };
 		50163AD324A34B1D006C9708 /* VisionPoseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50163AD224A34B1D006C9708 /* VisionPoseTests.swift */; };
 		50163ADE24A34B1D006C9708 /* VisionPoseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50163ADD24A34B1D006C9708 /* VisionPoseUITests.swift */; };
+		50705B3A24A4BFB600EA50B7 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50705B3924A4BFB600EA50B7 /* VideoCapture.swift */; };
+		50705B3C24A4BFCB00EA50B7 /* AVCaptureVideoOrientation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50705B3B24A4BFCB00EA50B7 /* AVCaptureVideoOrientation+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		500BB12D24A4CDAD00083FDF /* CGImage+DrawPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImage+DrawPoint.swift"; sourceTree = "<group>"; };
 		50163AB824A34B1C006C9708 /* VisionPose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisionPose.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50163ABB24A34B1C006C9708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50163ABD24A34B1C006C9708 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,8 @@
 		50163AD924A34B1D006C9708 /* VisionPoseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisionPoseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50163ADD24A34B1D006C9708 /* VisionPoseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionPoseUITests.swift; sourceTree = "<group>"; };
 		50163ADF24A34B1D006C9708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50705B3924A4BFB600EA50B7 /* VideoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		50705B3B24A4BFCB00EA50B7 /* AVCaptureVideoOrientation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureVideoOrientation+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 				50163ABB24A34B1C006C9708 /* AppDelegate.swift */,
 				50163ABD24A34B1C006C9708 /* SceneDelegate.swift */,
 				50163ABF24A34B1C006C9708 /* ViewController.swift */,
+				50705B3924A4BFB600EA50B7 /* VideoCapture.swift */,
+				50705B3B24A4BFCB00EA50B7 /* AVCaptureVideoOrientation+Extension.swift */,
+				500BB12D24A4CDAD00083FDF /* CGImage+DrawPoint.swift */,
 				50163AC124A34B1C006C9708 /* Main.storyboard */,
 				50163AC424A34B1D006C9708 /* Assets.xcassets */,
 				50163AC624A34B1D006C9708 /* LaunchScreen.storyboard */,
@@ -258,9 +267,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50705B3A24A4BFB600EA50B7 /* VideoCapture.swift in Sources */,
 				50163AC024A34B1C006C9708 /* ViewController.swift in Sources */,
 				50163ABC24A34B1C006C9708 /* AppDelegate.swift in Sources */,
 				50163ABE24A34B1C006C9708 /* SceneDelegate.swift in Sources */,
+				500BB12E24A4CDAD00083FDF /* CGImage+DrawPoint.swift in Sources */,
+				50705B3C24A4BFCB00EA50B7 /* AVCaptureVideoOrientation+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

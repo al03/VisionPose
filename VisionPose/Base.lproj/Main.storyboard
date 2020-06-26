@@ -1,24 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17132" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VisionPose" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dTy-yy-CWw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7U-Re-AEj">
+                                <rect key="frame" x="350" y="64" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="Vzb-bv-S0o"/>
+                                    <constraint firstAttribute="height" constant="44" id="dho-qO-iQN"/>
+                                </constraints>
+                                <state key="normal" image="arrow.triangle.2.circlepath.camera.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="onCameraButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eRI-Ic-0Ih"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dTy-yy-CWw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2EP-HT-2s2"/>
+                            <constraint firstItem="dTy-yy-CWw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BLx-SS-W7W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M7U-Re-AEj" secondAttribute="trailing" constant="20" id="Gxp-Mp-abu"/>
+                            <constraint firstItem="M7U-Re-AEj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="UOK-Mg-9jq"/>
+                            <constraint firstItem="dTy-yy-CWw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ler-fw-I2X"/>
+                            <constraint firstItem="dTy-yy-CWw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="uBd-mm-2Oc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="previewImageView" destination="dTy-yy-CWw" id="IUe-qF-ac6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="40.579710144927539" y="109.82142857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.triangle.2.circlepath.camera.fill" catalog="system" width="128" height="94"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
