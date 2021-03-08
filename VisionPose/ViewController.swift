@@ -87,17 +87,27 @@ class ViewController: UIViewController {
                 self.previewImageView.image = image
             }
         } else {
-            observations.forEach { processObservation($0) }
+            let points = observations.map { (observation) -> [CGPoint] in
+                let ps = processObservation(observation)
+                return ps ?? []
+            }
+            
+            let flatten = points.flatMap{$0}
+
+            let image = currentFrame?.drawPoints(points: flatten)
+            DispatchQueue.main.async {
+                self.previewImageView.image = image
+            }
         }
         
     }
     
-    func processObservation(_ observation: VNRecognizedPointsObservation) {
+    func processObservation(_ observation: VNRecognizedPointsObservation) -> [CGPoint]? {
         
         // Retrieve all torso points.
         guard let recognizedPoints =
                 try? observation.recognizedPoints(forGroupKey: VNRecognizedPointGroupKey.all) else {
-            return
+            return []
         }
         
         
@@ -109,12 +119,7 @@ class ViewController: UIViewController {
                                                   Int(imageSize.height))
         }
         
-//        print("pose cnt \(imagePoints.count): \(imagePoints)")
-        
-        let image = currentFrame?.drawPoints(points: imagePoints)
-        DispatchQueue.main.async {
-            self.previewImageView.image = image
-        }
+        return imagePoints
     }
 
 }

@@ -16,7 +16,7 @@ extension CGImage {
         cntx?.draw(self, in: CGRect(x: 0, y: 0, width: width, height: height))
         for point in points {
             cntx?.setFillColor(red: 0, green: 1, blue: 0, alpha: 1)
-            cntx?.addArc(center: point, radius: 4, startAngle: 0, endAngle: CGFloat(2*Double.pi), clockwise: false)
+            cntx?.addArc(center: point, radius: 3, startAngle: 0, endAngle: CGFloat(2*Double.pi), clockwise: false)
             cntx?.drawPath(using: .fill)
         }
         let _cgim = cntx?.makeImage()
